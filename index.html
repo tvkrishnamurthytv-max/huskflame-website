@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Husk & Flame | Hand-poured Coconut Shell Soy Candles</title>
+  <meta name="description" content="Hand-poured 100% natural soy wax candles in real coconut shells, made in Bengaluru. Every candle comes in a gift box." />
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #1b3628;
+      --forest-dark: #12251b;
+      --forest-light: #284b38;
+      --cream: #f8f5ef;
+      --cream-card: #ffffff;
+      --sand: #ede6d8;
+      --gold: #c69c53;
+      --text-main: #1f2421;
+      --text-muted: #5c6660;
+      --border: #dfd8ca;
+      --accent-red: #b83b3b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--cream);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: var(--cream);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--forest);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--forest);
+      text-decoration: underline;
+    }
+
+    .cart-pill {
+      background: var(--forest);
+      color: #fff;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+      color: #fff;
+      padding: 4.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: #e6ebe8;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--gold);
+      color: #16221b;
+      font-weight: 700;
+      padding: 0.85rem 1.8rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.93;
+      transform: translateY(-1px);
+    }
+
+    .btn-forest {
+      background-color: var(--forest);
+      color: #fff;
+      font-weight: 600;
+      padding: 0.8rem 1.4rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      width: 100%;
+      transition: background 0.15s ease;
+    }
+
+    .btn-forest:hover {
+      background-color: var(--forest-dark);
+    }
+
+    .trust-strip {
+      background: var(--sand);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 1.5rem;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--forest);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    /* Layout Container */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 2.75rem;
+    }
+
+    .section-tag {
+      color: var(--forest);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .section-header h2 {
+      font-size: 2.15rem;
+      color: var(--forest);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .step-card {
+      background: var(--cream-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .step-num {
+      width: 34px;
+      height: 34px;
+      background: var(--forest);
+      color: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Product Cards */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .product-card {
+      background: var(--cream-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 18px rgba(27, 54, 40, 0.04);
+    }
+
+    .product-art {
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      padding: 1.25rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .art-festive-4 {
+      background: linear-gradient(135deg, #1b3628, #2f5b44);
+    }
+
+    .art-festive-2 {
+      background: linear-gradient(135deg, #6e2c2c, #964141);
+    }
+
+    .art-duo {
+      background: linear-gradient(135deg, #3a4f41, #5a7462);
+    }
+
+    .art-icon {
+      font-size: 2.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--gold);
+      color: #16221b;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    .product-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .product-title {
+      font-size: 1.35rem;
+      color: var(--forest);
+      margin-bottom: 0.4rem;
+    }
+
+    .product-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      font-size: 0.88rem;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .feature-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    .selector-group {
+      margin-bottom: 0.85rem;
+    }
+
+    .selector-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--forest);
+      margin-bottom: 0.25rem;
+    }
+
+    select, input, textarea {
+      width: 100%;
+      padding: 0.65rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      background: #fff;
+      color: var(--text-main);
+    }
+
+    select:focus, input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--forest);
+    }
+
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: 1rem 0 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed var(--border);
+    }
+
+    .price-tag {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--forest);
+    }
+
+    .price-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Scent Themes Showcase */
+    .scents-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .scent-chip {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .scent-chip h4 {
+      color: var(--forest);
+      font-size: 0.98rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .scent-chip p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Order & Checkout Section */
+    .order-section {
+      background: var(--sand);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .checkout-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+    }
+
+    .panel h3 {
+      color: var(--forest);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    .cart-item-title {
